@@ -40,38 +40,32 @@ router.get('/events', (req,res) => {
     {
       "_id": "1",
       "name": "Angular: Web Development",
-      "description": "2 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "2 Days"
     },
     {
       "_id": "2",
       "name": "Python: Machine Learning",
-      "description": "2 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "2 Days"
     },
     {
       "_id": "3",
       "name": "Machine Learning",
-      "description": "2 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "2 Days"
     },
     {
       "_id": "4",
       "name": "GoLang",
-      "description": "2 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "2 Days"
     },
     {
       "_id": "5",
       "name": "IPhone Programming",
-      "description": "2 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "2 Days"
     },
     {
       "_id": "6",
       "name": "Android Programming",
-      "description": "2 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "2 Days"
     }
   ]
   res.json(events)
@@ -82,38 +76,32 @@ router.get('/special', verifyToken, (req, res) => {
     {
       "_id": "1",
       "name": "IOT",
-      "description": "3 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "3 Days"
     },
     {
       "_id": "2",
       "name": "IOS Internals",
-      "description": "3 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "3 Days"
     },
     {
       "_id": "3",
       "name": "LSP",
-      "description": "3 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "3 Days"
     },
     {
       "_id": "4",
       "name": "Struts",
-      "description": "3 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "3 Days"
     },
     {
       "_id": "5",
       "name": "Embedded Programming",
-      "description": "3 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "3 Days"
     },
     {
       "_id": "6",
       "name": "IOT Workshop",
-      "description": "3 Days",
-      "Teacher": "Piyush Manohar Khairnar"
+      "description": "3 Days"
     }
   ]
   res.json(specialEvents)
