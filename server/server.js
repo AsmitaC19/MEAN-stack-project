@@ -16,17 +16,17 @@ app.use(bodyParser.json());
 app.use('/api', api);
 
 app.listen(port, function(){
-    console.log("Marvellous Innfosystems : Server running on localhost:" + port);
+    console.log("Marvellous : Server running on localhost:" + port);
 });
 
 mongoose.connect("mongodb://localhost:27017/demo",function(err)
 {     
     if(err)     
     {          
-        console.log("Marvellous Infosystems : Fail to connect DB");     
+        console.log("Marvellous : Fail to connect DB");     
     }     
     else     
     {         
-        console.log("Marvellous Infosystems : Successfully connected to DB");     
+        console.log("Marvellous : Successfully connected to DB");     
     } 
 }); 
