@@ -1,9 +1,7 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component'
-import { EventsComponent } from './events/events.component';
-import { SpecialEventsComponent } from './special-events/special-events.component';
 import { AuthGuard } from './auth.guard';
+import { EventsComponent } from './events/events.component';
 
 const routes: Routes = [
   {
@@ -12,19 +10,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'events',
+    path : 'events', 
     component: EventsComponent
   },
-  {
-    path: 'special-events',
-    canActivate: [AuthGuard],
-    component: SpecialEventsComponent
-  },
-  {
-    path: 'login',
-    component: LoginComponent
-  }
-];
+  { path : 'user', loadChildren: () => import('./user/user.module').then(m=>m.UserModule)},
+  { path : 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
+  ]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
