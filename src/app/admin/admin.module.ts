@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminSpecialComponent } from './admin-special/admin-special.component';
-import { AdminEventsComponent } from './admin-events/admin-events.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -16,8 +15,7 @@ import { AlertModule,AlertConfig } from 'ngx-bootstrap/alert';
 @NgModule({
   declarations: [
     AdminLoginComponent,
-    AdminSpecialComponent,
-    AdminEventsComponent
+    AdminSpecialComponent
   ],
   imports: [
     CommonModule,
