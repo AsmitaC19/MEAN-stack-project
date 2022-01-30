@@ -9,7 +9,9 @@ export class EventsComponent implements OnInit
 {
 
   events = []
-  constructor(private _eventService: EventService) { }
+  constructor(private _eventService: EventService) 
+  { 
+  }
 
   ngOnInit() 
   {
