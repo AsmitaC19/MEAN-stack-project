@@ -31,15 +31,18 @@ export class EventService
     return this.http.post<any>(this.baseURL, eve);
   }
 
-  getEventList():Observable<any> {
+  getEventList():Observable<any> 
+  {
     return this.http.get<any>(this.baseURL);
   }
 
-  putEvent(eve:adminEvent,_id:string):Observable<any> {
+  putEvent(eve:adminEvent,_id:string):Observable<any> 
+  {
     return this.http.put<any>(this.baseURL+`/${_id}`,eve);
   }
 
-  deleteEvent(_id: string):Observable<any> {
+  deleteEvent(_id: string):Observable<any> 
+  {
     return this.http.delete<any>(this.baseURL+`/${_id}`);
   }
 }
