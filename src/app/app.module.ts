@@ -1,4 +1,5 @@
 import { AuthGuard } from './auth.guard';
+import { Auth1Guard } from './auth1.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -6,33 +7,42 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 import { EventsComponent } from './events/events.component';
-import { SpecialEventsComponent } from './special-events/special-events.component';
 import { AuthService } from './auth.service';
 import { EventService } from './event.service';
-import { TokenInterceptorService } from './token-interceptor.service';
+import { TokenInterceptor1Service } from './token-interceptor1.service';
+import { TokenInterceptor2Service } from './token-interceptor2.service';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalModule,BsModalService } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    EventsComponent,
-    SpecialEventsComponent
+    EventsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CollapseModule.forRoot(),
+    BrowserAnimationsModule,
+    ModalModule
   ],
-  providers: [AuthService, AuthGuard, EventService, 
+  providers: [AuthService, AuthGuard, Auth1Guard, EventService, BsModalService,
   {
     provide: HTTP_INTERCEPTORS,
-    useClass: TokenInterceptorService,
+    useClass: TokenInterceptor1Service,
     multi: true
-  }],
+  }
+  /*{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor2Service,
+    multi: true
+  }*/
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
